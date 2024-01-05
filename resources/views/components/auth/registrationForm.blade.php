@@ -67,13 +67,12 @@
             })
             hideLoader();
 
-            if (res.status === 201 && res.data['status'] === 'success') {
+            if (res.status === 200 && res.data['status'] === 'success') {
                 successToast(res.data['message']);
                 setTimeout(function() {
                     window.location.href = '/dashboard'
                 }, 2000)
             } else {
-                console.log(res.data);
                 errorToast(res.data['message']);
             }
         }

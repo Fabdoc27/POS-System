@@ -14,7 +14,7 @@ Route::post( '/user-update', [UserController::class, 'updateProfile'] )->middlew
 
 // Page Routes
 // Route::get('/',[HomeController::class,'HomePage']);
-Route::view( '/', 'pages.home' );
+Route::view( '/', 'pages.home' )->name( 'home.page' );
 Route::view( '/userLogin', 'pages.auth.login' )->name( 'login.page' );
 Route::view( '/userRegistration', 'pages.auth.registration' )->name( 'registration.page' );
 Route::view( '/sendOtp', 'pages.auth.sendOtp' )->name( 'otp.page' );
