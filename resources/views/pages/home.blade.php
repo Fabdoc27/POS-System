@@ -17,7 +17,7 @@
                     <li class="nav-item me-4"><a class="nav-link" href="#">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
                 </ul>
-                <div><a class="btn mt-3 bg-gradient-primary" href="{{ route('login.page') }}">Sign In</a></div>
+                <div><a class="btn mt-3 bg-gradient-primary" href="{{ route('login') }}">Sign In</a></div>
             </div>
         </div>
     </nav>
@@ -31,9 +31,8 @@
                     <p class="lead text-muted mb-4">Discover streamlined transactions, real-time inventory management, and
                         actionable insights in one intuitive POS app.</p>
                     <div class="d-flex flex-wrap"><a class="btn bg-gradient-primary me-2 mb-2 mb-sm-0"
-                            href="{{ route('dashboard.page') }}">Start Sale</a>
-                        <a class="btn bg-gradient-primary mb-2 mb-sm-0"
-                            href="{{ route('registration.page') }}">Registration</a>
+                            href="{{ route('dashboard') }}">Start Sale</a>
+                        <a class="btn bg-gradient-primary mb-2 mb-sm-0" href="{{ route('registration') }}">Registration</a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 offset-lg-1">

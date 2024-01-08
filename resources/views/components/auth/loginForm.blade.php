@@ -10,9 +10,9 @@
                     <hr />
                     <div class="d-flex justify-content-center mt-3">
                         <span>
-                            <a class="text-center ms-3 h6" href="{{ route('registration.page') }}">Sign Up </a>
+                            <a class="text-center ms-3 h6" href="{{ route('registration') }}">Sign Up </a>
                             <span class="ms-1">|</span>
-                            <a class="text-center ms-3 h6" href="{{ route('otp.page') }}">Forget Password</a>
+                            <a class="text-center ms-3 h6" href="{{ route('otp') }}">Forget Password</a>
                         </span>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                 successToast(res.data['message']);
                 setTimeout(function() {
                     window.location.href = "/dashboard";
-                }, 2000);
+                }, 1000);
             } else {
                 errorToast("Login Credentials are Invalid");
             }

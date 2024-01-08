@@ -37,7 +37,7 @@
                 <span class="icon-nav m-0 h5" onclick="MenuBarClickHandler()">
                     <img class="nav-logo-sm mx-2" src="{{ asset('images/menu.svg') }}" alt="logo" />
                 </span>
-                <a href="{{ route('home.page') }}">
+                <a href="{{ route('home') }}">
                     <img class="nav-logo  mx-2" src="{{ asset('images/logo.png') }}" alt="logo" />
                 </a>
             </div>
@@ -51,7 +51,7 @@
                             <h6>User Name</h6>
                             <hr class="user-dropdown-divider  p-0" />
                         </div>
-                        <a href="{{ route('profile.page') }}" class="side-bar-item">
+                        <a href="{{ route('user_profile') }}" class="side-bar-item">
                             <span class="side-bar-item-caption">Profile</span>
                         </a>
                         <a href="{{ route('logout') }}" class="side-bar-item">
@@ -65,19 +65,19 @@
 
 
     <div id="sideNavRef" class="side-nav-open">
-        <a href="{{ url('/dashboard') }}" class="side-bar-item">
+        <a href="{{ route('dashboard') }}" class="side-bar-item">
             <i class="bi bi-graph-up"></i>
             <span class="side-bar-item-caption">Dashboard</span>
         </a>
 
-        <a href="{{ url('/customerPage') }}" class="side-bar-item">
-            <i class="bi bi-people"></i>
-            <span class="side-bar-item-caption">Customer</span>
-        </a>
-
-        <a href="{{ url('/categoryPage') }}" class="side-bar-item">
+        <a href="{{ route('category') }}" class="side-bar-item">
             <i class="bi bi-list-nested"></i>
             <span class="side-bar-item-caption">Category</span>
+        </a>
+
+        <a href="{{ route('customer') }}" class="side-bar-item">
+            <i class="bi bi-people"></i>
+            <span class="side-bar-item-caption">Customer</span>
         </a>
 
         <a href="{{ url('/productPage') }}" class="side-bar-item">

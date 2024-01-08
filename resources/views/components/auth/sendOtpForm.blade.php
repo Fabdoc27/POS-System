@@ -33,7 +33,7 @@
                 sessionStorage.setItem('email', email);
                 setTimeout(function() {
                     window.location.href = '/verifyOtp'
-                }, 2000)
+                }, 1000)
             } else {
                 errorToast(res.data['message'])
             }

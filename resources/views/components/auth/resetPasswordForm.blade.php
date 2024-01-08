@@ -42,7 +42,7 @@
                 successToast(res.data['message']);
                 setTimeout(function() {
                     window.location.href = '/userLogin'
-                }, 2000)
+                }, 1000)
             } else {
                 errorToast(res.data['message'])
             }
