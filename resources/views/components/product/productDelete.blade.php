@@ -2,9 +2,11 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body text-center">
-                <h3 class="mt-3">Delete</h3>
+                <h3 class=" mt-3">Delete</h3>
                 <p class="mb-3">Once delete, you can't get it back.</p>
                 <input class="d-none" id="deleteID" />
+                <input class="d-none" id="deleteFilePath" />
+
             </div>
             <div class="modal-footer justify-content-center">
                 <div>
@@ -20,17 +22,19 @@
 
 <script>
     async function onDelete() {
-        let categoryId = document.getElementById('deleteID').value;
+        let productId = document.getElementById('deleteID').value;
+        let deleteFilePath = document.getElementById('deleteFilePath').value;
         document.getElementById('delete-modal-close').click();
 
         showLoader();
-        let res = await axios.post("/category-delete", {
-            id: categoryId
-        })
+        let res = await axios.post("/product-delete", {
+            id: productId,
+            file_path: deleteFilePath
+        });
         hideLoader();
 
         if (res.data === 1) {
-            successToast("Category Deleted");
+            successToast("Product Deleted");
             await getList();
         } else {
             errorToast("Failed");

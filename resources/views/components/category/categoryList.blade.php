@@ -58,16 +58,16 @@
         });
 
         $('.editBtn').on('click', async function() {
-            let id = $(this).data('id');
-            await oldData(id);
+            let editId = $(this).data('id');
+            await oldData(editId)
             $("#update-modal").modal('show');
             // $("#updateID").val(editId);
         });
 
         $('.deleteBtn').on('click', function() {
-            let id = $(this).data('id');
+            let deleteId = $(this).data('id');
             $("#delete-modal").modal('show');
-            $("#deleteID").val(id);
+            $("#deleteID").val(deleteId);
         });
 
         new DataTable('#tableData', {

@@ -80,7 +80,7 @@
             <span class="side-bar-item-caption">Customer</span>
         </a>
 
-        <a href="{{ url('/productPage') }}" class="side-bar-item">
+        <a href="{{ route('product') }}" class="side-bar-item">
             <i class="bi bi-bag"></i>
             <span class="side-bar-item-caption">Product</span>
         </a>
