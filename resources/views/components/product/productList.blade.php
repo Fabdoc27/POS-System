@@ -47,7 +47,7 @@
 
         res.data.forEach(function(item, index) {
             let row = `<tr>
-                            <td><img class="w-20 h-auto" alt="" src="${item['img_url']}"></td>
+                            <td><img class="w-25 h-auto" alt="" src="${item['img_url']}"></td>
                             <td>${item['name']}</td>
                             <td>${item['price']}</td>
                             <td>${item['unit']}</td>

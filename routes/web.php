@@ -6,15 +6,6 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-// API Routes
-Route::post( '/user-registration', [UserController::class, 'userRegistration'] );
-Route::post( '/user-login', [UserController::class, 'userLogin'] );
-Route::post( '/send-otp', [UserController::class, 'sendOtp'] );
-Route::post( '/verify-otp', [UserController::class, 'verifyOtp'] );
-Route::post( '/reset-password', [UserController::class, 'passwordReset'] )->middleware( 'token' );
-Route::get( '/user-profile', [UserController::class, 'userProfile'] )->middleware( 'token' );
-Route::post( '/user-update', [UserController::class, 'updateProfile'] )->middleware( 'token' );
-
 // Page Routes
 // Route::get('/',[HomeController::class,'HomePage']);
 Route::view( '/', 'pages.home' )->name( 'home' );
@@ -25,9 +16,19 @@ Route::view( '/verifyOtp', 'pages.auth.verifyOtp' );
 Route::view( '/resetPassword', 'pages.auth.resetPassword' )->middleware( 'token' );
 Route::view( '/dashboard', 'pages.dashboard.dashboard' )->name( 'dashboard' )->middleware( 'token' );
 Route::view( '/userProfile', 'pages.dashboard.profile' )->name( 'user_profile' )->middleware( 'token' );
-Route::get( '/logout', [UserController::class, 'userLogout'] )->name( 'logout' );
 
 Route::middleware( ['token'] )->group( function () {
+    // API Routes
+    Route::post( '/user-registration', [UserController::class, 'userRegistration'] )->withoutMiddleware( 'token' );
+    Route::post( '/user-login', [UserController::class, 'userLogin'] )->withoutMiddleware( 'token' );
+    Route::post( '/send-otp', [UserController::class, 'sendOtp'] )->withoutMiddleware( 'token' );
+    Route::post( '/verify-otp', [UserController::class, 'verifyOtp'] )->withoutMiddleware( 'token' );
+
+    Route::post( '/reset-password', [UserController::class, 'passwordReset'] );
+    Route::get( '/user-profile', [UserController::class, 'userProfile'] );
+    Route::post( '/user-update', [UserController::class, 'updateProfile'] );
+    Route::get( '/logout', [UserController::class, 'userLogout'] )->name( 'logout' );
+
     // Category
     Route::view( '/category', 'pages.dashboard.category' )->name( 'category' );
     Route::get( '/category-list', [CategoryController::class, 'categoryList'] );
