@@ -92,7 +92,7 @@ class UserController extends Controller {
 
                 return response()->json( [
                     "status"  => "success",
-                    "message" => "4 Digits Otp Code has been Send to your Email.",
+                    "message" => "4 Digits Otp Code has been Send to your Email",
                 ], 200 );
             } else {
                 return response()->json( [
@@ -130,7 +130,7 @@ class UserController extends Controller {
 
                 return response()->json( [
                     "status"  => "success",
-                    "message" => "OTP Verification Successful.",
+                    "message" => "OTP Verification Successful",
                 ], 200 )->cookie( 'token', $token, 60 * 10 );
             } else {
                 return response()->json( [
@@ -159,13 +159,13 @@ class UserController extends Controller {
 
             return response()->json( [
                 "status"  => "success",
-                "message" => "Password Reset Successful.",
+                "message" => "Password Reset Successful",
             ], 200 );
 
         } catch ( Exception $e ) {
             return response()->json( [
                 "status"  => "failed",
-                "message" => "Something Went Wrong.",
+                "message" => $e->getMessage(),
             ], 200 );
         }
     }
@@ -179,9 +179,9 @@ class UserController extends Controller {
         $user  = User::where( 'email', '=', $email )->first();
 
         return response()->json( [
-            'status'  => 'success',
-            'message' => 'Request Successful',
-            'data'    => $user,
+            "status"  => "success",
+            "message" => "Request Successful",
+            "data"    => $user,
         ] );
     }
 
@@ -204,13 +204,13 @@ class UserController extends Controller {
             ] );
 
             return response()->json( [
-                'status'  => 'success',
-                'message' => 'Profile Update Successful',
+                "status"  => "success",
+                "message" => "Profile Update Successful",
             ], 200 );
         } catch ( Exception $e ) {
             return response()->json( [
-                'status'  => 'failed',
-                'message' => 'Something Went Wrong',
+                "status"  => "failed",
+                "message" => $e->getMessage(),
             ], 200 );
         }
     }
