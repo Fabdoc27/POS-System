@@ -7,7 +7,7 @@
                         <h5>Invoices</h5>
                     </div>
                     <div class="align-items-center col">
-                        <a href="{{ url('/salePage') }}" class="float-end btn m-0 bg-gradient-primary">Create Sale</a>
+                        <a href="{{ route('sales') }}" class="float-end btn m-0 bg-gradient-primary">Create Sale</a>
                     </div>
                 </div>
                 <hr class="bg-dark " />
@@ -57,22 +57,27 @@
                         <td>${item['discount']}</td>
                         <td>${item['payable']}</td>
                         <td>
-                            <button data-id="${item['id']}" data-cus="${item['customer']['id']}" class="viewBtn btn btn-outline-dark text-sm px-3 py-1 btn-sm m-0"><i class="fa text-sm fa-eye"></i></button>
-                            <button data-id="${item['id']}" data-cus="${item['customer']['id']}" class="deleteBtn btn btn-outline-dark text-sm px-3 py-1 btn-sm m-0"><i class="fa text-sm  fa-trash-alt"></i></button>
+                            <button data-id="${item['id']}" data-cust="${item['customer']['id']}" class="viewBtn btn btn-outline-dark text-sm px-3 py-1 btn-sm m-0">
+                                <i class="fa text-sm fa-eye"></i>
+                            </button>
+                            <button data-id="${item['id']}" data-cust="${item['customer']['id']}" class="deleteBtn btn btn-outline-dark text-sm ms-2 px-3 py-1 btn-sm m-0">
+                                <i class="fa text-sm  fa-trash-alt"></i>
+                            </button>
                         </td>
                     </tr>`
             tableList.append(row)
         })
 
         $('.viewBtn').on('click', async function() {
-            let id = $(this).data('id');
-            let cus = $(this).data('cus');
-            await InvoiceDetails(cus, id)
+            let inv_id = $(this).data('id');
+            let cust_id = $(this).data('cust');
+            await InvoiceDetails(inv_id, cust_id)
         })
 
+        // sending deleteID value on modal
         $('.deleteBtn').on('click', function() {
-            let id = $(this).data('id');
-            document.getElementById('deleteID').value = id;
+            let deleteId = $(this).data('id');
+            document.getElementById('deleteID').value = deleteId;
             $("#delete-modal").modal('show');
         })
 

@@ -66,37 +66,37 @@
 
     <div id="sideNavRef" class="side-nav-open">
         <a href="{{ route('dashboard') }}" class="side-bar-item">
-            <i class="bi bi-graph-up"></i>
+            <i class="fas fa-chart-line"></i>
             <span class="side-bar-item-caption">Dashboard</span>
         </a>
 
         <a href="{{ route('category') }}" class="side-bar-item">
-            <i class="bi bi-list-nested"></i>
+            <i class="fas fa-sliders-h"></i>
             <span class="side-bar-item-caption">Category</span>
         </a>
 
         <a href="{{ route('customer') }}" class="side-bar-item">
-            <i class="bi bi-people"></i>
+            <i class="fas fa-user-cog"></i>
             <span class="side-bar-item-caption">Customer</span>
         </a>
 
         <a href="{{ route('product') }}" class="side-bar-item">
-            <i class="bi bi-bag"></i>
+            <i class="fas fa-shopping-bag"></i>
             <span class="side-bar-item-caption">Product</span>
         </a>
 
         <a href="{{ route('sales') }}" class="side-bar-item">
-            <i class="bi bi-currency-dollar"></i>
+            <i class="fas fa-dollar-sign"></i>
             <span class="side-bar-item-caption">Create Sale</span>
         </a>
 
         <a href="{{ route('invoice') }}" class="side-bar-item">
-            <i class="bi bi-receipt"></i>
+            <i class="fas fa-file-invoice"></i>
             <span class="side-bar-item-caption">Invoice</span>
         </a>
 
-        <a href="{{ url('/reportPage') }}" class="side-bar-item">
-            <i class="bi bi-file-earmark-bar-graph"></i>
+        <a href="{{ route('report') }}" class="side-bar-item">
+            <i class="far fa-file-pdf"></i>
             <span class="side-bar-item-caption">Report</span>
         </a>
     </div>

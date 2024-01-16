@@ -2,13 +2,14 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 // Page Routes
-// Route::get('/',[HomeController::class,'HomePage']);
 Route::view( '/', 'pages.home' )->name( 'home' );
 Route::view( '/userLogin', 'pages.auth.login' )->name( 'login' );
 Route::view( '/userRegistration', 'pages.auth.registration' )->name( 'registration' );
@@ -61,4 +62,9 @@ Route::middleware( ['token'] )->group( function () {
     Route::post( '/invoice-create', [InvoiceController::class, 'invoiceCreate'] );
     Route::post( '/invoice-details', [InvoiceController::class, 'invoiceDetails'] );
     Route::post( '/invoice-delete', [InvoiceController::class, 'invoiceDelete'] );
+
+    // Summary & Report
+    Route::get( '/summary', [DashboardController::class, 'summary'] );
+    Route::view( '/report', 'pages.dashboard.report' )->name( 'report' );
+    Route::get( '/sales-report/{fromDate}/{toDate}', [ReportController::class, 'salesReport'] );
 } );

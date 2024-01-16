@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 class InvoiceController extends Controller {
     public function invoiceList( Request $request ) {
         $userId = $request->header( 'id' );
-        return Invoice::where( 'user_id', $userId )->with( 'customer' )->get();
+        return Invoice::with( 'customer' )->where( 'user_id', $userId )->get();
     }
 
     public function invoiceCreate( Request $request ) {

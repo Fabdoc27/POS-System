@@ -23,7 +23,7 @@
                         <div class="col-4">
                             <img class="w-50" src="{{ 'images/logo.png' }}">
                             <p class="text-bold mx-0 my-1 text-dark">Invoice </p>
-                            <p class="text-sm mx-0 my-1">Date: {{ date('Y-m-d') }} </p>
+                            <p class="text-xs mx-0 my-1">Date: {{ date('Y-m-d') }} </p>
                         </div>
                     </div>
                     <hr class="mx-0 my-2 p-0 bg-secondary" />
@@ -177,7 +177,7 @@
 
             InvoiceItemList.forEach(function(item, index) {
                 let row = `<tr class="text-xs">
-                            <td>${item['product_name']}</td>
+                            <td>${item['name']}</td>
                             <td>${item['quantity']}</td>
                             <td>${item['sale_price']}</td>
                             <td>
@@ -247,12 +247,12 @@
                 errorToast("All fields are required");
             } else {
                 let items = {
+                    name: pName,
                     product_id: pId,
-                    sale_price: pPrice,
+                    sale_price: pTotalPrice,
                     quantity: pQty
                 }
                 InvoiceItemList.push(items);
-                // console.log(InvoiceItemList);
                 $('#create-modal').modal('hide')
                 showInvoiceItems();
             }
@@ -288,7 +288,7 @@
                 let productName = $(this).data('name');
                 let productPrice = $(this).data('price');
                 let productId = $(this).data('id');
-                addModal(productPrice, productPrice, productId)
+                addModal(productId, productName, productPrice)
             })
 
             new DataTable('#productTable', {
