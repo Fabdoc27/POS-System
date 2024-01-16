@@ -94,13 +94,7 @@ class UserController extends Controller {
                     "status"  => "success",
                     "message" => "4 Digits Otp Code has been Send to your Email",
                 ], 200 );
-            } else {
-                return response()->json( [
-                    "status"  => "failed",
-                    "message" => "Invalid Email",
-                ], 200 );
             }
-
         } catch ( Exception $e ) {
             return response()->json( [
                 "status"  => "failed",
@@ -112,7 +106,7 @@ class UserController extends Controller {
     public function verifyOtp( Request $request ) {
         try {
             $request->validate( [
-                'otp' => 'required|digits:4',
+                'otp' => 'required|string|min:4',
             ] );
 
             $email = $request->input( 'email' );
@@ -132,13 +126,7 @@ class UserController extends Controller {
                     "status"  => "success",
                     "message" => "OTP Verification Successful",
                 ], 200 )->cookie( 'token', $token, 60 * 10 );
-            } else {
-                return response()->json( [
-                    "status"  => "failed",
-                    "message" => "Invalid Otp",
-                ], 200 );
             }
-
         } catch ( Exception $e ) {
             return response()->json( [
                 "status"  => "failed",
@@ -155,7 +143,7 @@ class UserController extends Controller {
 
             $email    = $request->header( 'email' );
             $password = $request->input( 'password' );
-            User::where( 'email', '=', $email )->update( ['password' => $password] );
+            User::where( 'email', '=', $email )->update( ['password' => Hash::make( $password )] );
 
             return response()->json( [
                 "status"  => "success",
@@ -200,7 +188,7 @@ class UserController extends Controller {
                 'firstName' => $request->input( 'firstName' ),
                 'lastName'  => $request->input( 'lastName' ),
                 'mobile'    => $request->input( 'mobile' ),
-                'password'  => $request->input( 'password' ),
+                'password'  => Hash::make( $request->input( 'password' ) ),
             ] );
 
             return response()->json( [

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -52,4 +53,12 @@ Route::middleware( ['token'] )->group( function () {
     Route::post( '/product-unique', [ProductController::class, 'productById'] );
     Route::post( '/product-update', [ProductController::class, 'productUpdate'] );
     Route::post( '/product-delete', [ProductController::class, 'productDelete'] );
+
+    // Invoice
+    Route::view( '/sales', 'pages.dashboard.sale' )->name( 'sales' );
+    Route::view( '/invoice', 'pages.dashboard.invoice' )->name( 'invoice' );
+    Route::get( '/invoice-list', [InvoiceController::class, 'invoiceList'] );
+    Route::post( '/invoice-create', [InvoiceController::class, 'invoiceCreate'] );
+    Route::post( '/invoice-details', [InvoiceController::class, 'invoiceDetails'] );
+    Route::post( '/invoice-delete', [InvoiceController::class, 'invoiceDelete'] );
 } );
