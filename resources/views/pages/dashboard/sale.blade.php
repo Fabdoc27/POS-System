@@ -53,15 +53,15 @@
                     {{-- invoice footer --}}
                     <div class="row">
                         <div class="col-12">
-                            <p class="text-bold text-sm my-1 text-dark"> TOTAL: <i class="bi bi-currency-dollar"></i> <span
+                            <p class="text-bold text-sm my-1 text-dark"> TOTAL: <i class="fas fa-dollar-sign"></i> <span
                                     id="total"></span></p>
-                            <p class="text-bold text-sm my-2 text-dark"> PAYABLE: <i class="bi bi-currency-dollar"></i>
+                            <p class="text-bold text-sm my-2 text-dark"> PAYABLE: <i class="fas fa-dollar-sign"></i>
                                 <span id="payable"></span>
                             </p>
-                            <p class="text-bold text-sm my-1 text-dark"> VAT(5%): <i class="bi bi-currency-dollar"></i>
+                            <p class="text-bold text-sm my-1 text-dark"> VAT(5%): <i class="fas fa-dollar-sign"></i>
                                 <span id="vat"></span>
                             </p>
-                            <p class="text-bold text-sm my-1 text-dark"> Discount: <i class="bi bi-currency-dollar"></i>
+                            <p class="text-bold text-sm my-1 text-dark"> Discount: <i class="fas fa-dollar-sign"></i>
                                 <span id="discount"></span>
                             </p>
                             <span class="text-sm">Discount(%):</span>
