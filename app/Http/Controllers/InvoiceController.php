@@ -73,7 +73,7 @@ class InvoiceController extends Controller {
 
         // product list of the particular invoice
         $invoiceProduct = InvoiceProduct::where( 'invoice_id', $request->input( 'inv_id' ) )
-            ->where( 'user_id', $userId )->get();
+            ->where( 'user_id', $userId )->with( 'product' )->get();
 
         return array(
             'customer' => $customerDetails,

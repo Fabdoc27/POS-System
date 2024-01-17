@@ -69,9 +69,9 @@
         })
 
         $('.viewBtn').on('click', async function() {
-            let inv_id = $(this).data('id');
-            let cust_id = $(this).data('cust');
-            await InvoiceDetails(inv_id, cust_id)
+            let id = $(this).data('id');
+            let cust = $(this).data('cust');
+            await InvoiceDetails(id, cust)
         })
 
         // sending deleteID value on modal
@@ -87,6 +87,5 @@
             ],
             lengthMenu: [5, 10, 20, 30, 50]
         });
-
     }
 </script>

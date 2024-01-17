@@ -73,7 +73,7 @@
     async function InvoiceDetails(inv_id, cust_id) {
         showLoader();
         let res = await axios.post("/invoice-details", {
-            inv_id: inv_id
+            inv_id: inv_id,
             cust_id: cust_id,
         })
         hideLoader();
@@ -90,13 +90,16 @@
         invoiceList.empty();
 
         res.data['product'].forEach(function(item, index) {
+            console.log(res.data['product']);
             let row = `<tr class="text-sm">
-                        <td>${item['name']}</td>
+                        <td>${item['product']['name']}</td>
                         <td>${item['quantity']}</td>
                         <td>${item['sale_price']}</td>
                     </tr>`
             invoiceList.append(row)
         });
+
+        $("#details-modal").modal('show');
     }
 
     function printInvoice() {
