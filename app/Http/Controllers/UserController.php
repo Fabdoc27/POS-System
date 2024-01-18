@@ -36,7 +36,7 @@ class UserController extends Controller {
                 "status"  => "success",
                 "message" => "User Registration Successful",
                 "user"    => $user,
-            ], 200 )->cookie( 'token', $token, 60 * 60 );
+            ], 200 )->cookie( 'token', $token, 60 * 60 * 24 );
 
         } catch ( Exception $e ) {
             return response()->json( [
@@ -62,7 +62,7 @@ class UserController extends Controller {
                 return response()->json( [
                     "status"  => "success",
                     "message" => "User Login Successful",
-                ], 200 )->cookie( 'token', $token, 60 * 60 );
+                ], 200 )->cookie( 'token', $token, 60 * 60 * 24 );
             }
 
         } catch ( Exception $e ) {
