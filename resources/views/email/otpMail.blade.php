@@ -9,7 +9,7 @@
         <h2
             style="background: #00466a;margin: 0 auto;width: max-content;padding: 0 10px;color: #fff;border-radius: 4px;">
             {{ $otp }}</h2>
-        <p style="font-size:0.9em;">Regards,<br />Mr X Bekaryd</p>
+        <p style="font-size:0.9em;">Regards,<br />Mr X Bekary</p>
         <hr style="border:none;border-top:1px solid #eee" />
     </div>
 </div>
