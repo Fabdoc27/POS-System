@@ -62,7 +62,6 @@
             document.getElementById('firstName').value = data['firstName'];
             document.getElementById('lastName').value = data['lastName'];
             document.getElementById('mobile').value = data['mobile'];
-            document.getElementById('password').value = data['password'];
         } else {
             errorToast(res.data['message'])
         }
@@ -80,8 +79,6 @@
             errorToast('Last Name is required')
         } else if (mobile.length === 0) {
             errorToast('Mobile is required')
-        } else if (password.length < 6) {
-            errorToast('Password is required')
         } else {
             showLoader();
             let res = await axios.post("/user-update", {
