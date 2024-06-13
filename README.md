@@ -2,7 +2,7 @@
 
 ---
 
-It works with Laravel 10.x, PHP > 8.1 and MySQL Database
+This project works with Laravel 10.x, PHP 8.1 or higher, and a MySQL database.
 
 ## Getting Started
 
