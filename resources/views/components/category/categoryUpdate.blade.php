@@ -29,7 +29,6 @@
 
 <script>
     async function oldData(editId) {
-        // alert(editId);
         document.getElementById('updateID').value = editId;
 
         showLoader();
@@ -61,7 +60,6 @@
                 successToast("Category Updated");
                 document.getElementById("update-form").reset();
                 await getList();
-
             } else {
                 errorToast("Failed");
             }

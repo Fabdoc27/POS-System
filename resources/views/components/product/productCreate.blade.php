@@ -9,27 +9,20 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 p-1">
-
                                 <label class="form-label">Category</label>
                                 <select type="text" class="form-control form-select" id="productCategory">
                                     <option value="">Select Category</option>
                                 </select>
-
                                 <label class="form-label mt-2">Name</label>
                                 <input type="text" class="form-control" id="productName">
-
                                 <label class="form-label mt-2">Price</label>
                                 <input type="text" class="form-control" id="productPrice">
-
                                 <label class="form-label mt-2">Unit</label>
                                 <input type="text" class="form-control" id="productUnit">
-
                                 <img class="w-20 my-3 d-block" id="newImg" src="{{ asset('images/default.jpg') }}" />
-
                                 <label class="form-label">Image</label>
                                 <input oninput="newImg.src=window.URL.createObjectURL(this.files[0])" type="file"
                                     class="form-control" id="productImg">
-
                             </div>
                         </div>
                     </div>
@@ -43,7 +36,6 @@
         </div>
     </div>
 </div>
-
 
 <script>
     dropdown();
@@ -69,7 +61,6 @@
             errorToast("All fields are required");
         } else if (!productImage) {
             errorToast("Product image required");
-
         } else {
             document.getElementById('modal-close').click();
 
@@ -94,7 +85,6 @@
                 successToast("Product Created");
                 document.getElementById("save-form").reset();
                 await getList();
-
             } else {
                 errorToast("Failed");
             }

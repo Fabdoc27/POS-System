@@ -27,9 +27,6 @@
 
 
 <script>
-    // document.getElementById("save-btn").addEventListener('click', async function() {
-
-    // another option
     async function save() {
         let categoryName = document.getElementById("categoryName").value;
 
@@ -48,11 +45,9 @@
                 successToast("Category Created");
                 document.getElementById("save-form").reset();
                 await getList();
-
             } else {
                 errorToast("Failed");
             }
         }
     }
-    // });
 </script>

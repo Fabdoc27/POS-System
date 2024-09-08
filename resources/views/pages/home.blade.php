@@ -21,8 +21,6 @@
             </div>
         </div>
     </nav>
-
-
     <section class="pb-5">
         <div class="container pt-2">
             <div class="row align-items-center mb-5">
@@ -41,8 +39,6 @@
             </div>
         </div>
     </section>
-
-
     <section class="pb-5">
         <div class="container">
             <div class="row">
@@ -84,9 +80,7 @@
             </div>
         </div>
     </section>
-
     <br />
-
     <section class="py-5">
         <div class="container">
             <div class="row align-items-center">
@@ -112,7 +106,6 @@
             </div>
         </div>
     </section>
-
     <footer class="py-3 bg-light">
         <div class="container text-center pb-5 border-bottom">
             <a class="d-inline-block mx-auto mb-4" href="#">
@@ -142,9 +135,7 @@
                 </a>
             </div>
         </div>
-
         <div class="mb-5"></div>
-
         <div class="container">
             <p class="text-center">All rights reserved © Md Ashraful Karim 2024</p>
         </div>

@@ -31,9 +31,6 @@
 
 
 <script>
-    // document.getElementById("save-btn").addEventListener('click', async function() {
-
-    // another option
     async function save() {
         let customerName = document.getElementById("customerName").value;
         let customerEmail = document.getElementById("customerEmail").value;
@@ -56,7 +53,6 @@
                 successToast("Customer Created");
                 document.getElementById("save-form").reset();
                 await getList();
-
             } else {
                 errorToast("Failed");
             }

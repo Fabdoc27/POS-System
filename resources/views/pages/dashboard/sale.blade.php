@@ -5,7 +5,6 @@
         <div class="row">
             <div class="col-md-4 col-lg-4 p-2">
                 <div class="shadow-sm h-100 bg-white rounded-3 p-3">
-
                     {{-- invoice header --}}
                     <div class="row">
                         <div class="col-8">
@@ -27,7 +26,6 @@
                         </div>
                     </div>
                     <hr class="mx-0 my-2 p-0 bg-secondary" />
-                    {{-- invoice header --}}
 
                     {{-- invoice body --}}
                     <div class="row">
@@ -42,13 +40,11 @@
                                     </tr>
                                 </thead>
                                 <tbody class="w-100" id="invoiceList">
-
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <hr class="mx-0 my-2 p-0 bg-secondary" />
-                    {{-- invoice body --}}
 
                     {{-- invoice footer --}}
                     <div class="row">
@@ -72,13 +68,9 @@
                                     class="btn  my-3 bg-gradient-primary w-40">Confirm</button>
                             </p>
                         </div>
-
                         <div class="col-12 p-2">
-
                         </div>
                     </div>
-                    {{-- invoice footer --}}
-
                 </div>
             </div>
 
@@ -93,7 +85,6 @@
                             </tr>
                         </thead>
                         <tbody class="w-100" id="productList">
-
                         </tbody>
                     </table>
                 </div>
@@ -111,13 +102,11 @@
                             </tr>
                         </thead>
                         <tbody class="w-100" id="customerList">
-
                         </tbody>
                     </table>
                 </div>
             </div>
             {{-- customer --}}
-
         </div>
     </div>
 
@@ -147,7 +136,6 @@
                         </div>
                     </form>
                 </div>
-
                 <div class="modal-footer justify-content-center">
                     <button id="modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal"
                         aria-label="Close">Close</button>
@@ -157,7 +145,6 @@
         </div>
     </div>
     {{-- add product modal --}}
-
 
     <script>
         (async () => {
@@ -177,13 +164,13 @@
 
             InvoiceItemList.forEach(function(item, index) {
                 let row = `<tr class="text-xs">
-                            <td>${item['name']}</td>
-                            <td>${item['quantity']}</td>
-                            <td>${item['sale_price']}</td>
-                            <td>
-                                <a data-index="${index}" class="btn remove text-xxs px-2 py-1  btn-sm m-0">Remove</a>
-                            </td>
-                        </tr>`
+                        <td>${item['name']}</td>
+                        <td>${item['quantity']}</td>
+                        <td>${item['sale_price']}</td>
+                        <td>
+                            <a data-index="${index}" class="btn remove text-xxs px-2 py-1  btn-sm m-0">Remove</a>
+                        </td>
+                    </tr>`
                 invoiceList.append(row)
             })
 
@@ -233,9 +220,8 @@
             document.getElementById('vat').innerText = vat;
             document.getElementById('discount').innerText = discount;
         }
-        // invoice item
 
-        // product
+        // Product Create
         function addProduct() {
             let pId = document.getElementById('productId').value;
             let pName = document.getElementById('productName').value;
@@ -265,6 +251,7 @@
             $('#create-modal').modal('show')
         }
 
+        // Product List
         async function productList() {
             let res = await axios.get("/product-list");
             let productList = $("#productList");
@@ -275,11 +262,11 @@
 
             res.data.forEach(function(item, index) {
                 let row = `<tr >
-                            <td class="text-sm"> <img class="w-15 me-2" src="${item['img_url']}"/> ${item['name']} ($ ${item['price']})</td>
-                            <td>
-                                <a data-name="${item['name']}" data-price="${item['price']}" data-id="${item['id']}" class="btn btn-outline-dark text-xs ms-5 px-2 py-1 addProduct  btn-xs m-0">Add</a>
-                            </td>
-                        </tr>`
+                        <td class="text-sm"> <img class="w-15 me-2" src="${item['img_url']}"/> ${item['name']} ($ ${item['price']})</td>
+                        <td>
+                            <a data-name="${item['name']}" data-price="${item['price']}" data-id="${item['id']}" class="btn btn-outline-dark text-xs ms-5 px-2 py-1 addProduct  btn-xs m-0">Add</a>
+                        </td>
+                    </tr>`
                 productList.append(row)
             })
 
@@ -300,7 +287,6 @@
                 lengthChange: false
             });
         }
-        // product
 
         // customer
         async function customerList() {
@@ -313,11 +299,11 @@
 
             res.data.forEach(function(item, index) {
                 let row = `<tr>
-                                <td><i class="bi bi-person me-2"></i> ${item['name']}</td>
-                                <td>
-                                    <a data-name="${item['name']}" data-email="${item['email']}" data-id="${item['id']}" class="btn btn-outline-dark addCustomer  text-xs px-2 py-1  btn-xs ms-4 m-0">Add</a>
-                                </td>
-                        </tr>`
+                            <td><i class="bi bi-person me-2"></i> ${item['name']}</td>
+                            <td>
+                                <a data-name="${item['name']}" data-email="${item['email']}" data-id="${item['id']}" class="btn btn-outline-dark addCustomer  text-xs px-2 py-1  btn-xs ms-4 m-0">Add</a>
+                            </td>
+                    </tr>`
 
                 customerList.append(row)
             })
@@ -342,7 +328,6 @@
                 lengthChange: false
             });
         }
-        // customer
 
         // create invoice
         async function createInvoice() {
@@ -365,7 +350,6 @@
                 errorToast("Customer Required")
             } else if (InvoiceItemList.length === 0) {
                 errorToast("Product Required")
-
             } else {
                 showLoader();
                 let res = await axios.post("/invoice-create", data)
@@ -379,6 +363,5 @@
                 }
             }
         }
-        // create invoice
     </script>
 @endsection

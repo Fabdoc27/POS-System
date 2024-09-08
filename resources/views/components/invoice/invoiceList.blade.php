@@ -25,7 +25,6 @@
                         </tr>
                     </thead>
                     <tbody id="tableList">
-
                     </tbody>
                 </table>
             </div>
@@ -74,7 +73,6 @@
             await InvoiceDetails(id, cust)
         })
 
-        // sending deleteID value on modal
         $('.deleteBtn').on('click', function() {
             let deleteId = $(this).data('id');
             document.getElementById('deleteID').value = deleteId;

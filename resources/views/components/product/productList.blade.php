@@ -23,7 +23,6 @@
                         </tr>
                     </thead>
                     <tbody id="tableList" class="text-center">
-
                     </tbody>
                 </table>
             </div>
@@ -73,7 +72,6 @@
             $("#delete-modal").modal('show');
             $("#deleteID").val(deleteId);
             $("#deleteFilePath").val(path)
-
         })
 
         new DataTable('#tableData', {
@@ -82,6 +80,5 @@
             ],
             lengthMenu: [5, 10, 20, 30, 50]
         });
-
     }
 </script>

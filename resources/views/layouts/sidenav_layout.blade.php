@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>X-Bakery</title>
-
     <link rel="icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}" />
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet" />
@@ -23,13 +22,11 @@
 </head>
 
 <body>
-
     <div id="loader" class="LoadingOverlay d-none">
         <div class="Line-Progress">
             <div class="indeterminate"></div>
         </div>
     </div>
-
     <nav class="navbar fixed-top px-0 shadow-sm bg-white">
         <div class="container-fluid">
             <div class="navbar-brand" href="#">
@@ -40,7 +37,6 @@
                     <img class="nav-logo  mx-2" src="{{ asset('images/logo.png') }}" alt="logo" />
                 </a>
             </div>
-
             <div class="float-right h-auto d-flex">
                 <div class="user-dropdown">
                     <img class="icon-nav-img" src="{{ asset('images/user.webp') }}" alt="" />
@@ -61,51 +57,39 @@
             </div>
         </div>
     </nav>
-
-
     <div id="sideNavRef" class="side-nav-open">
         <a href="{{ route('dashboard') }}" class="side-bar-item">
             <i class="fas fa-chart-line"></i>
             <span class="side-bar-item-caption">Dashboard</span>
         </a>
-
         <a href="{{ route('category') }}" class="side-bar-item">
             <i class="fas fa-sliders-h"></i>
             <span class="side-bar-item-caption">Category</span>
         </a>
-
         <a href="{{ route('customer') }}" class="side-bar-item">
             <i class="fas fa-user-cog"></i>
             <span class="side-bar-item-caption">Customer</span>
         </a>
-
         <a href="{{ route('product') }}" class="side-bar-item">
             <i class="fas fa-shopping-bag"></i>
             <span class="side-bar-item-caption">Product</span>
         </a>
-
         <a href="{{ route('sales') }}" class="side-bar-item">
             <i class="fas fa-dollar-sign"></i>
             <span class="side-bar-item-caption">Create Sale</span>
         </a>
-
         <a href="{{ route('invoice') }}" class="side-bar-item">
             <i class="fas fa-file-invoice"></i>
             <span class="side-bar-item-caption">Invoice</span>
         </a>
-
         <a href="{{ route('report') }}" class="side-bar-item">
             <i class="far fa-file-pdf"></i>
             <span class="side-bar-item-caption">Report</span>
         </a>
     </div>
-
-
     <div id="contentRef" class="content">
         @yield('content')
     </div>
-
-
 
     <script>
         function MenuBarClickHandler() {
@@ -124,7 +108,6 @@
             }
         }
     </script>
-
 </body>
 
 </html>

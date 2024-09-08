@@ -6,7 +6,6 @@
                 <p class="mb-3">Once delete, you can't get it back.</p>
                 <input class="d-none" id="deleteID" />
                 <input class="d-none" id="deleteFilePath" />
-
             </div>
             <div class="modal-footer justify-content-center">
                 <div>

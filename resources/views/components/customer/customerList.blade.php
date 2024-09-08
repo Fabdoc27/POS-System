@@ -23,7 +23,6 @@
                         </tr>
                     </thead>
                     <tbody id="tableList" class="text-center">
-
                     </tbody>
                 </table>
             </div>
@@ -33,7 +32,6 @@
 
 <script>
     getList();
-
 
     async function getList() {
         showLoader();
@@ -64,7 +62,6 @@
             let editId = $(this).data('id');
             await oldData(editId)
             $("#update-modal").modal('show');
-            // $("#updateID").val(editId);
         });
 
         $('.deleteBtn').on('click', function() {

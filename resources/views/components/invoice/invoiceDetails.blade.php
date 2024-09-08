@@ -34,13 +34,11 @@
                                     </tr>
                                 </thead>
                                 <tbody class="w-100" id="invoiceList">
-
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <hr class="mx-0 my-2 p-0 bg-secondary" />
-
                     <div class="row">
                         <div class="col-12">
                             <p class="text-bold text-xs my-1 text-dark"> TOTAL: <i class="fas fa-dollar-sign"></i>
@@ -57,7 +55,6 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div class="modal-footer justify-content-center">

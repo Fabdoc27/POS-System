@@ -9,19 +9,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 p-1">
-
-
                                 <label class="form-label">Category</label>
                                 <select type="text" class="form-control form-select" id="productCategoryUpdate">
                                     <option value="">Select Category</option>
                                 </select>
-
                                 <label class="form-label mt-2">Name</label>
                                 <input type="text" class="form-control" id="productNameUpdate">
-
                                 <label class="form-label mt-2">Price</label>
                                 <input type="text" class="form-control" id="productPriceUpdate">
-
                                 <label class="form-label mt-2">Unit</label>
                                 <input type="text" class="form-control" id="productUnitUpdate">
                                 <br />
@@ -30,23 +25,18 @@
                                 <label class="form-label mt-2">Image</label>
                                 <input oninput="oldImg.src=window.URL.createObjectURL(this.files[0])" type="file"
                                     class="form-control" id="productImgUpdate">
-
                                 <input type="text" class="d-none" id="updateID">
                                 <input type="text" class="d-none" id="filePath">
-
-
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-
             <div class="modal-footer justify-content-center">
                 <button id="update-modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal"
                     aria-label="Close">Close</button>
                 <button onclick="onUpdate()" id="update-btn" class="btn bg-gradient-success">Update</button>
             </div>
-
         </div>
     </div>
 </div>
@@ -93,7 +83,6 @@
         if (productCategory.length === 0 || productName.length === 0 || productPrice.length === 0 || productUnit
             .length === 0) {
             errorToast("All fields are required");
-
         } else {
             document.getElementById('update-modal-close').click();
 
@@ -120,7 +109,6 @@
                 successToast("Product Updated");
                 document.getElementById("update-form").reset();
                 await getList();
-
             } else {
                 errorToast("Failed");
             }

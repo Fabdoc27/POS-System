@@ -65,8 +65,6 @@
             </tr>
         </tbody>
     </table>
-
-
     <h3>Details</h3>
     <table class="customers">
         <thead>
@@ -94,7 +92,6 @@
                     <td>{{ $item->created_at }}</td>
                 </tr>
             @endforeach
-
         </tbody>
     </table>
 </body>

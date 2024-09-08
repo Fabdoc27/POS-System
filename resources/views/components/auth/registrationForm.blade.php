@@ -44,7 +44,6 @@
 
 <script>
     async function onRegistration() {
-
         let email = document.getElementById('email').value;
         let firstName = document.getElementById('firstName').value;
         let lastName = document.getElementById('lastName').value;
