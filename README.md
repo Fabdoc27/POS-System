@@ -4,43 +4,41 @@ This project works with Laravel 10.x, PHP 8.1 or higher, and a MySQL database.
 
 ## Getting Started
 
-It's super easy to setup.
+Follow these steps to set up the project:
 
-First, clone the project and change the directory
+1. **Clone the repository and navigate to the directory:**
 
-```shell
-git clone git@github.com:Fabdoc27/pos_app_jwt.git
-cd pos_app_jwt
-```
+    ```shell
+    git clone git@github.com:Fabdoc27/POS-System.git
+    cd POS-System
+    ```
 
-Then follow the process.
+2. **Install the dependencies:**
 
-1. Install the dependencies
+    ```shell
+    composer install
+    ```
 
-```shell
-composer install
-```
+3. **Create the environment file:**
 
-2. Copy `.env.example` to `.env`
+    ```shell
+    cp .env.example .env
+    ```
 
-```shell
-cp .env.example .env
-```
+4. **Generate the application key:**
 
-3. Generate application key
+    ```shell
+    php artisan key:generate
+    ```
 
-```shell
-php artisan key:generate
-```
+5. **Run the database migrations:**
 
-4. Run the migration
+    ```shell
+    php artisan migrate
+    ```
 
-```shell
-php artisan migrate
-```
+6. **Start the development server:**
 
-5. Start the webserver
-
-```shell
-php artisan serve
-```
+    ```shell
+    php artisan serve
+    ```
