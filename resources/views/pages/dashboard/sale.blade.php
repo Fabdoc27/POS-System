@@ -49,8 +49,7 @@
                     {{-- invoice footer --}}
                     <div class="row">
                         <div class="col-12">
-                            <p class="text-bold text-sm my-1 text-dark"> TOTAL: <i class="fas fa-dollar-sign"></i> <span
-                                    id="total"></span></p>
+                            <p class="text-bold text-sm my-1 text-dark"> TOTAL: <i class="fas fa-dollar-sign"></i> <span id="total"></span></p>
                             <p class="text-bold text-sm my-2 text-dark"> PAYABLE: <i class="fas fa-dollar-sign"></i>
                                 <span id="payable"></span>
                             </p>
@@ -61,11 +60,10 @@
                                 <span id="discount"></span>
                             </p>
                             <span class="text-sm">Discount(%):</span>
-                            <input onkeydown="return false" value="0" min="0" type="number" step="0.25"
-                                onchange="discountChange()" class="form-control w-40 " id="discountPercent" />
+                            <input onkeydown="return false" value="0" min="0" type="number" step="0.25" onchange="discountChange()" class="form-control w-40 "
+                                id="discountPercent" />
                             <p>
-                                <button onclick="createInvoice()"
-                                    class="btn  my-3 bg-gradient-primary w-40">Confirm</button>
+                                <button onclick="createInvoice()" class="btn  my-3 bg-gradient-primary w-40">Confirm</button>
                             </p>
                         </div>
                         <div class="col-12 p-2">
@@ -111,8 +109,7 @@
     </div>
 
     {{-- add product modal --}}
-    <div class="modal animated zoomIn" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal animated zoomIn" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-md modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -137,8 +134,7 @@
                     </form>
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <button id="modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal"
-                        aria-label="Close">Close</button>
+                    <button id="modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     <button onclick="addProduct()" id="save-btn" class="btn bg-gradient-success">Add</button>
                 </div>
             </div>

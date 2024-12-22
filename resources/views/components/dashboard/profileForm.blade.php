@@ -9,8 +9,7 @@
                         <div class="row m-0 p-0">
                             <div class="col-md-4 p-2">
                                 <label>Email Address</label>
-                                <input readonly id="email" placeholder="User Email" class="form-control"
-                                    type="email" />
+                                <input readonly id="email" placeholder="User Email" class="form-control" type="email" />
                             </div>
                             <div class="col-md-4 p-2">
                                 <label>First Name</label>
@@ -26,8 +25,7 @@
                             </div>
                             <div class="col-md-4 p-2">
                                 <label>Password</label>
-                                <input id="password" placeholder="User Password" class="form-control"
-                                    type="password" />
+                                <input id="password" placeholder="User Password" class="form-control" type="password" />
                             </div>
                         </div>
                         <div class="row m-0 p-0">

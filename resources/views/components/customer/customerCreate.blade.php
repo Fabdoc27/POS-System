@@ -21,8 +21,7 @@
                 </form>
             </div>
             <div class="modal-footer justify-content-center">
-                <button id="modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal"
-                    aria-label="Close">Close</button>
+                <button id="modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
                 <button onclick="save()" id="save-btn" class="btn bg-gradient-success">Save</button>
             </div>
         </div>
@@ -58,5 +57,4 @@
             }
         }
     }
-    // });
 </script>

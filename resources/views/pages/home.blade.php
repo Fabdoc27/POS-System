@@ -6,8 +6,8 @@
             <a class="navbar-brand" href="#">
                 <img class="img-fluid" src="{{ asset('/images/logo.png') }}" alt="" width="96px">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header01"
-                aria-controls="header01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header01" aria-controls="header01" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="header01">
@@ -25,11 +25,14 @@
         <div class="container pt-2">
             <div class="row align-items-center mb-5">
                 <div class="col-12 col-md-10 col-lg-5 mb-5 mb-lg-0">
-                    <h2 class="fw-bold mb-3">Elevate Your Sales Game with Our Powerful POS Application! </h2>
-                    <p class="lead text-muted mb-4">Discover streamlined transactions, real-time inventory management, and
-                        actionable insights in one intuitive POS app.</p>
-                    <div class="d-flex flex-wrap"><a class="btn bg-gradient-primary me-2 mb-2 mb-sm-0"
-                            href="{{ route('dashboard') }}">Start Sale</a>
+                    <h2 class="fw-bold mb-3">
+                        Elevate Your Sales Game with Our Powerful POS Application!
+                    </h2>
+                    <p class="lead text-muted mb-4">
+                        Discover streamlined transactions, real-time inventory management, and actionable insights in one intuitive POS app.
+                    </p>
+                    <div class="d-flex flex-wrap">
+                        <a class="btn bg-gradient-primary me-2 mb-2 mb-sm-0" href="{{ route('dashboard') }}">Start Sale</a>
                         <a class="btn bg-gradient-primary mb-2 mb-sm-0" href="{{ route('registration') }}">Registration</a>
                     </div>
                 </div>
@@ -137,7 +140,7 @@
         </div>
         <div class="mb-5"></div>
         <div class="container">
-            <p class="text-center">All rights reserved © Md Ashraful Karim 2024</p>
+            <p class="text-center">All rights reserved © Md Ashraful Karim 2025</p>
         </div>
     </footer>
 @endsection

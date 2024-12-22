@@ -21,16 +21,14 @@
                                 <input type="text" class="form-control" id="productUnit">
                                 <img class="w-20 my-3 d-block" id="newImg" src="{{ asset('images/default.jpg') }}" />
                                 <label class="form-label">Image</label>
-                                <input oninput="newImg.src=window.URL.createObjectURL(this.files[0])" type="file"
-                                    class="form-control" id="productImg">
+                                <input oninput="newImg.src=window.URL.createObjectURL(this.files[0])" type="file" class="form-control" id="productImg">
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer justify-content-center">
-                <button id="modal-close" class="btn bg-gradient-primary mx-2" data-bs-dismiss="modal"
-                    aria-label="Close">Close</button>
+                <button id="modal-close" class="btn bg-gradient-primary mx-2" data-bs-dismiss="modal" aria-label="Close">Close</button>
                 <button onclick="save()" id="save-btn" class="btn bg-gradient-success">Save</button>
             </div>
         </div>

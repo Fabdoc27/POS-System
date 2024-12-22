@@ -9,10 +9,8 @@
             </div>
             <div class="modal-footer justify-content-center">
                 <div>
-                    <button type="button" id="delete-modal-close" class="btn bg-gradient-primary mx-2"
-                        data-bs-dismiss="modal">Cancel</button>
-                    <button onclick="onDelete()" type="button" id="confirmDelete"
-                        class="btn bg-gradient-danger">Delete</button>
+                    <button type="button" id="delete-modal-close" class="btn bg-gradient-primary mx-2" data-bs-dismiss="modal">Cancel</button>
+                    <button onclick="onDelete()" type="button" id="confirmDelete" class="btn bg-gradient-danger">Delete</button>
                 </div>
             </div>
         </div>

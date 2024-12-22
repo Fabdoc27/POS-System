@@ -25,10 +25,10 @@
 
         if (password
             .length < 6) {
-            errorToast('Password must be 6 charecter')
+            errorToast('Password must be 6 characters')
         } else if (cpassword
             .length < 6) {
-            errorToast('Confirm password must be 6 charecter');
+            errorToast('Confirm password must be 6 characters');
         } else if (password !== cpassword) {
             errorToast('Password & confirm password must be same');
         } else {

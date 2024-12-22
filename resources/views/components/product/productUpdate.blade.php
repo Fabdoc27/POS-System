@@ -23,8 +23,7 @@
                                 <img class="w-15" id="oldImg" src="{{ asset('images/default.jpg') }}" />
                                 <br />
                                 <label class="form-label mt-2">Image</label>
-                                <input oninput="oldImg.src=window.URL.createObjectURL(this.files[0])" type="file"
-                                    class="form-control" id="productImgUpdate">
+                                <input oninput="oldImg.src=window.URL.createObjectURL(this.files[0])" type="file" class="form-control" id="productImgUpdate">
                                 <input type="text" class="d-none" id="updateID">
                                 <input type="text" class="d-none" id="filePath">
                             </div>
@@ -33,8 +32,7 @@
                 </form>
             </div>
             <div class="modal-footer justify-content-center">
-                <button id="update-modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal"
-                    aria-label="Close">Close</button>
+                <button id="update-modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
                 <button onclick="onUpdate()" id="update-btn" class="btn bg-gradient-success">Update</button>
             </div>
         </div>

@@ -22,8 +22,7 @@
                 </form>
             </div>
             <div class="modal-footer justify-content-center">
-                <button id="update-modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal"
-                    aria-label="Close">Close</button>
+                <button id="update-modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
                 <button onclick="onUpdate()" id="update-btn" class="btn bg-gradient-success">Update</button>
             </div>
         </div>
