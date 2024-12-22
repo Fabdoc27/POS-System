@@ -16,7 +16,7 @@ The Point of Sale (POS) App is designed to simplify small business operations. B
 
 Follow these instructions to set up the project.
 
-## Installation
+### Installation
 
 1. **Clone the repository:**
 
